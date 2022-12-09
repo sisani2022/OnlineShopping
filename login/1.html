@@ -9,12 +9,8 @@ var found1 = str.match( re1 );
 
 function fun(x)
 {
-	var x1=x.value;
-	var x2=x1.match(/^[a-zA-Z ]*$/);
-	if(x2)
-		alert('yes');
-	else
-		alert('no');
+	if(!(x.value.match(/^[a-zA-Z ]*$/)))
+		
 }
 </script>
 </head>

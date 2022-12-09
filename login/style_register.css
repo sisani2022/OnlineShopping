@@ -1,0 +1,22 @@
+body {
+background-color:#B0E0E6;
+}
+#header {
+     text-align:center;
+     color:white;
+     font-family:sans-serif;
+     padding:5px;
+     background-color:#CfC0C0;
+}
+.b1 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width:150px;
+    border-radius:12px;
+}

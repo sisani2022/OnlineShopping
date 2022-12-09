@@ -1,0 +1,51 @@
+<?php
+global $passwordErr,$password1Err;
+$passwordErr=$password1Err="";    
+if ($_SERVER["REQUEST_METHOD"] =="POST" &&!empty($_POST["1"])){
+    try{
+         if (empty($_POST["password1"])) {
+            $GLOBALS['password1Err'] = " *password required";
+            $count++;
+            //echo '13';
+         
+         } 
+         else {
+              $GLOBALS['password1'] = test_input($_POST["password1"]);
+            if ($GLOBALS['password1']!=$GLOBALS['password']) {
+                      $GLOBALS['passwordErr']= " *Invalid password";
+                $count++;
+                //echo '14';
+               }
+        }
+         if($count==0)
+      {
+          $con=mysqli_connect("localhost","root","","first_project");
+          if($con)
+          {
+               $qu2="update user_details set password='".$_POST['password']."' where user_id='".$user_id."'";
+             if(mysqli_query($con,$qu2))
+              {
+                header("Location:../main1.php");
+             }
+             }
+               else
+             {
+             $result1="connection problem!..";
+             }
+             }
+             else
+             {
+             $result1="passwords must be same!..";
+             }
+   
+  
+          }
+           catch(Exception $e)
+        {
+         $result=$e;
+        }
+          }
+   if ($_SERVER["REQUEST_METHOD"] =="POST" &&!empty($_POST["2"])){
+   header("Location:../main1.php");
+          }
+          ?>
