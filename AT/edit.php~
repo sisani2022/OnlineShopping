@@ -1,0 +1,109 @@
+<html>
+<head>
+ <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <script src="bootstrap/js/jquery-1.8.0.min.js"></script>
+ <script src="bootstrap/js/bootstrap.min.js"></script>
+ <style type="text/css">
+ .btn{
+position:absolute;
+left:70px;
+top:150px;
+background-color:blue; 
+color:white
+}
+ 	#h:hover{
+ 		color: white;
+ 		text-decoration: none;
+ 	}
+ 	a{
+ 		color: white;
+ 		text-decoration: none;
+ 	}
+
+ </style>
+</head>
+<body>
+<?php
+include('config.php');
+if(isset($_GET['id']))
+{
+$id=$_GET['id'];
+if(isset($_POST['submit']))
+{
+$name=$_POST['name'];
+$age=$_POST['age'];
+$query3=mysql_query("update addd set name='$name', age='$age' where id='$id'");
+if($query3)
+{
+header('location:list.php');
+}
+}
+$query1=mysql_query("select * from addd where id='$id'");
+$query2=mysql_fetch_array($query1);
+?>
+<style type="text/css">
+ lable{
+    color:green;
+  }
+  .control-label{
+    color:green;
+  }
+  body{ background-color: white; }
+  #contaner{
+    box-shadow:10px green;
+    width: 400px;
+    height: 40%;
+    margin-right:500px;
+  }
+  .h{
+  position: relative;
+  right: -100px;
+  width:500px;
+  height:400px; 
+  box-shadow: 5px 5px 5px 5px green;
+ }
+ .container input{
+    width:200px;
+  }
+.container form{
+     position: relative;
+    right: -50px;
+  }
+}
+</style>
+</head>
+<br><br><br>
+<body>
+<fieldset style="width:300px;">
+<div class="container">
+<div id="contaner">
+<nav class="navbar navbar-fixed-top" style="background-color:green;">
+  <div class="container-fluid">
+  
+    <div class="navbar-header">
+    <a id="h1" href="../main.php">
+        <span class="glyphicon glyphicon-home"></span>
+    </a>
+    </div>
+   
+  </div>
+</nav>
+ <div class="h">
+ <center>
+ <br></br>
+  <h3><lable>Enter correct details</lable></h3>
+<form method="post" action="">
+<center><table><tr><th>Name:</th><th><input type="text" name="name" value="<?php echo $query2['name']; ?>" /></th></tr><br><br>
+<tr><th>Age:</th><th><input type="text" name="age" value="<?php echo $query2['age']; ?>" /></th></tr>
+</table></center>
+<br></br>
+<input type="submit" class=btn name="submit" value="update" />
+</form>
+<?php
+}
+?>
+</body>
+</html>
