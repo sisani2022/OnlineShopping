@@ -1,0 +1,61 @@
+ #h:hover{
+    color: white;
+    text-decoration: none;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  #h{
+    position:relative;
+    right:-800px;
+    color:white;
+    font-weight:bold;
+    font-size: 20px; 
+  }
+  .h{
+  position: relative;
+ bottom:-30px;
+  right: -10px;
+  width:400px;
+  height:500px; 
+  box-shadow: 5px 5px 5px 5px green;
+ }
+  #not{
+      position:relative;
+      top:110px;
+      right:-100px;
+      width:400px;
+      height:450px;
+      background-color:white;
+      box-shadow: 5px 5px 5px 5px green;
+  }
+  .glyphicon.glyphicon-home{
+    margin-top:10px;
+    font-size: 30px;
+}
+.glyphicon.glyphicon-home:hover{
+   margin-top:10px;
+    color:white;
+}
+#tab1{
+width:500px;
+}
+  #contaner{
+    box-shadow:10px green;
+    width: 500px;
+    height: 100%;
+    margin-right:500px;
+  }
+ button{
+ 	margin-right:-100px;
+ 	width:100px;
+ }
+ .row{
+ 	position: relative;
+ 	right: -100px;
+ }
+ 
+ .container input{
+    width:300px;
+  }
