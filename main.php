@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+ 	 <script src="bootstrap/js/jquery-1.8.0.min.js"></script>
+ 	 <script src="bootstrap/js/bootstrap.min.js"></script>
+	 <style type="text/css">
+			html { 
+      	  background: url('img/2.jpg') no-repeat center center fixed; 
+      	  background-size: cover;
+  	  }
+  	  body{
+  	  		background-color: transparent;
+  	  	}
+  	  div{
+        position: fixed;
+  	  	margin-top:100px;
+  	  	margin-left:700px; 
+  	  }
+  	  buttonGrocery Outlet
+  	  {
+  	  	margin-left:10px; 
+  	  }
+  	  #n{
+        background-color: transparent;
+  	  }
+      #n1{
+        color:white;
+        font-size:30px;
+        font-style:italic;
+        border-radius:20px;
+        background-color:green;
+        animation-name: example;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes example {
+    0%   {background-color:red;transform: rotateX(0deg); }
+    25%  {background-color:maroon;transform: rotateY(70deg);}
+    50%  {background-color:blue;transform: rotateX(140deg);}
+    75%  {background-color:green;transform: rotateY(210deg);}
+    100% {background-color:red;transform: rotateX(360deg);}
+}
+     
+
+	</style>
+</head>
+<body>
+<div id="n">
+<button id="n1">Grocery Outlet</button>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<img class="img-thumbnail img-circle" src="img/1.png" width="100" height="100"><br>
+<a href="main1.php"><button class="btn btn-success" style="width:70px">user</button></a><br>
+<br>
+<img class="img-thumbnail img-circle" src="img/1.png" width="100" height="100"><br>
+<a href="admin.php"><button class="btn btn-success" style="width:70px">admin</button></a>
+</div>
+</div
+</body>
+</html>

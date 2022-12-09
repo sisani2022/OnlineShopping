@@ -1,0 +1,70 @@
+user_details
+	create table  user_details(user_id varchar(50),first_name varchar(50),last_name varchar(50),dob date,phone_num char(10),address varchar(150),age real,confirm varchar(3),primary key(user_id));
+	
+	insert into user_details values(value1,values2,....),(),();
+item_list
+
+	create table item_list(item_id int ,item_category varchar(20),item_name varchar(40),item_cost real,item_measure varchar(6),item_rate int ,primary key(item_id));
+	
+	insert into item_list values(value1,values2,....),(),();
+Notification
+	create table notifications(user_id varchar(50),user_type char(1),notification varchar(100),foreign key(user_id) references user_details(user_id));
+	
+	insert into notifications values(value1,values2,....),(),();
+Offerslist
+        create  table offers_list(offer_no int ,item_id int,item1 int,item2 int ,item3 int,primary key(offer_no),foreign key(item_id) references item_list(item_id),foreign key(item1) references item_list(item_id),foreign key(item2) references item_list(item_id),foreign key(item3) references item_list(item_id));
+
+	insert into offers_list values(value1,values2,....),(),();
+cart_list
+	create table cart_list(user_id varchar(50),item_id int ,quantity int ,cost real,foreign key(item_id) references item_list(item_id),foreign key(user_id) references user_details(user_id));
+	
+	insert into cart_list values(value1,values2,....),(),();
+	
+	
+	
+	
+	<div class="h" style=" overflow: scroll; overflow-x: hidden;">
+<div class="container" >
+<div class="col-md-3">
+  <form class="navbar-form" method="post" role="search" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    <div class="input-group add-on">
+      <input class="form-control" placeholder="Search" name="st" id="srch-term" type="text">
+      <div class="input-group-btn">
+        <button class="btn btn-default" type="submit" ><i class="glyphicon glyphicon-search"></i></button>
+      </div>
+    </div>
+  </form>
+<br>
+<br>
+</div>
+<br>
+<br>
+<br>
+<br>
+<?php 
+//$_SESSION['id']='navyamasuram137@gmail.com';
+ //echo "<br><br><br><br>".$_SESSION['id'];
+echo $result;
+?>		
+</div>< end container>
+</div>
+<?php
+if(isset($_SESSION['id'])){?>
+<div id="h3">
+<?php
+$con=mysqli_connect("localhost","root","","first_project");
+$result="";
+$count=0;
+	if($con){
+	$result="<table style='width:300px;position: relative;top:80px;right: -30px;'class='table table-hover'> <thead><tr> <th>Notifications</th></tr></thead><tbody>";
+	$qu2="select *from notifications where user_type='u';";
+	 if($result1=mysqli_query($con,$qu2)){
+	while( $row=mysqli_fetch_array($result1,MYSQLI_ASSOC))
+               		  $result.="<tr><td>".++$count."</td><td>". $row['notification']."</td></tr>";
+	 }
+	 $result.="</tbody></table>";
+	}
+echo $result;
+?>
+</div>
+<?php  } ?-->

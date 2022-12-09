@@ -1,0 +1,32 @@
+<html>
+<head>
+<script>
+function  fun(x)
+{
+try{
+	var id=x.parentNode;
+	var b= document.createElement("input");
+	setAttributes(b,{"type": "text", "width": "30px"});
+	/*b.addEventListener("keyup", function(event) {
+   			 event.preventDefault();
+   			 if (event.keyCode == 13) {
+      				alert('navya');
+   				 }
+		});*/
+	x.appendChild(b,id);
+	}catch(e)
+	{
+alert(e);
+	}
+}
+function setAttributes(el, attrs) {
+  for(var key in attrs) {
+    el.setAttribute(key, attrs[key]);
+  }
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="fun(this)"/>
+</body>
+</html>

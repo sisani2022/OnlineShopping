@@ -1,0 +1,22 @@
+user_details
+	create table  user_details(user_id varchar(50),first_name varchar(50),last_name varchar(50),dob date,phone_num char(10),address varchar(150),age real,confirm varchar(3),primary key(user_id));
+	
+	insert into user_details values(value1,values2,....),(),();
+item_list
+
+	create table item_list(item_id int ,item_category varchar(20),item_name varchar(40),item_cost real,item_measure varchar(6),item_rate int ,primary key(item_id));
+	
+	insert into item_list values(value1,values2,....),(),();
+Notification
+	create table notifications(user_id varchar(50),user_type char(1),notification varchar(100),foreign key(user_id) references user_details(user_id));
+	
+	insert into notifications values(value1,values2,....),(),();
+Offerslist
+        create  table offers_list(offer_no int ,item_id int,item1 int,item2 int ,item3 int,primary key(offer_no),foreign key(item_id) references item_list(item_id),foreign key(item1) references item_list(item_id),foreign key(item2) references item_list(item_id),foreign key(item3) references item_list(item_id));
+
+	insert into offers_list values(value1,values2,....),(),();
+cart_list
+	create table cart_list(user_id varchar(50),item_id int ,quantity int ,cost real,foreign key(item_id) references item_list(item_id),foreign key(user_id) references user_details(user_id));
+	
+	insert into cart_list values(value1,values2,....),(),();
+	
