@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../bootstrap1/css/bootstrap.min.css">
+  <script src="../bootstrap1/js/jquery.js"></script>
+ <script src="../bootstrap1/js/bootstrap.min.js"></script>
+ <style type="text/css">
+ 	#h:hover{
+ 		color: white;
+ 		text-decoration: none;
+ 	}
+ 	a{
+ 		color: white;
+ 		text-decoration: none;
+ 	}
+
+ </style>
+</head>
+<body>
+
+<nav class="navbar navbar-fixed-top" style="background-color:green;">
+  <div class="container-fluid">
+    <div class="navbar-header" >
+      <a id="h" class="navbar-brand" href="html/main.html">GroceryOutlet</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
+      <li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Searchpage</h3>
+  <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+</div>
+
+</body>
+</html>
+
