@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../style/style.css">
+  <!--<script src="../../ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <script src="../bootstrap/js/jquery.js"></script>
+  <script src="../bootstrap/js/jquery-ui.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<style type="text/css">
+ lable{
+    color:green;
+  }
+  .control-label{
+    color:green;
+  }
+  #contaner{
+    box-shadow:10px green;
+    width: 100px;
+    height: 50%;
+    margin-right:400px;
+  }
+ #h3{
+  position: relative;
+ top:-450px;
+  right: -700px;
+  width:400px;
+  height:500px; 
+  box-shadow: 5px 5px 5px 5px green;
+ }
+ .container input{
+    width:70px;
+  }
+.container form{
+     position: relative;
+    right: 10px;
+  }
+  ul{
+  position:relative;
+  right:-50px;
+  list-style:none;
+  }
+  li{
+    position:relative;
+  right:-50px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div id="contaner" >
+<nav class="navbar navbar-fixed-top" style="background-color:green;">
+  <div class="container-fluid">
+  
+    <div class="navbar-header">
+    <a id="h1" href="../adminmain.php">
+        <span class="glyphicon glyphicon-home"></span>
+    </a>
+    </div>
+    <span id="h" style="position:relative;right:-200px;">GroceryOutlet</span>
+    <ul class="nav navbar-nav " style="postion:relative;right:-900px;">
+    <?php
+    	session_start();
+    	if(isset($_SESSION['id'])){?>
+    	             <li><a href="adminnot.php"><div class="notification-icon"><span class="glyphicon glyphicon-bell"></span>Notifications<span class="badge"><?php $count;?></span>
+</div></a></li>
+    		<li><a href="../login/logout1.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    	<?php  } 
+    	else
+    	{
+    	?>
+      <li ><a href="../login/login1.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <?php } ?>
+    </ul>
+  </div>
+</nav><br><br>
+<?php if(isset($_SESSION['id'])) { ?>
+<div id="tab1" style="width:1000px;">
+<?php
+$con=mysqli_connect("localhost","root","","first_project");
+$result="";
+$count=0;
+	if($con){
+	$result="<table style='color:green;width:1000px;position:relative;top:80px;right: -30px;' class='table table-hover table-bordered table-responsive'><thead><tr> <th colspan='2'>Notifications</th></tr></thead><tbody>";
+	$qu2="select *from notifications where user_type='a';";
+	 if($result1=mysqli_query($con,$qu2)){
+	while( $row=mysqli_fetch_array($result1,MYSQLI_ASSOC))
+               		  $result.="<tr><td>".++$count."</td><td>". $row['notification']."</td></tr>";
+	 }
+	 $result.="</tbody></table>";
+	}
+echo $result;
+?>
+</div>
+<?php }else { ?>
+  <lable style="position:relative;top:200px;left:200px;font-size:20px;"><span class="glyphicon glyphicon-alert" style="width:100px;color:red;"></span>You haven't logged Yet....</lable>
+</div>
+</div>
+<?php } ?>
+<nav class="navbar navbar-fixed-bottom" style="background-color:green;">
+<div id="h" style="font-size:16px;">Contact-Us:navvymasuram137@gmail.com
+</div>
+</nav>
+</body>
+</html>

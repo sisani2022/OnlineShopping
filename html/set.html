@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <script src="bootstrap/js/jquery-1.8.0.min.js"></script>
+ <script src="bootstrap/js/bootstrap.min.js"></script>
+ <style type="text/css">
+ 	#h:hover{
+ 		color: white;
+ 		text-decoration: none;
+ 	}
+ 	a{
+ 		color: white;
+ 		text-decoration: none;
+ 	}
+
+ </style>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top" style="background-color:green;">
+  <div class="container-fluid">
+    <div class="navbar-header" >
+      <a id="h" class="navbar-brand" href="main.html">GroceryOutlet</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li ><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<style type="text/css">
+ lable{
+    color:green;
+  }
+  .control-label{
+    color:green;
+  }
+  #contaner{
+    box-shadow:10px green;
+    width: 400px;
+    height: 40%;
+    margin-right:500px;
+  }
+  .h{
+  position: relative;
+  right: -100px;
+  width:500px;
+  height:400px; 
+  box-shadow: 5px 5px 5px 5px green;
+ }
+ .container input{
+    width:200px;
+  }
+.container form{
+     position: relative;
+    right: -50px;
+  }
+}
+</style>
+</head>
+<br><br><br>
+<body>
+   <script>
+$(document).ready(
+  
+  /* This is the function that will get executed after the DOM is fully loaded */
+  function () {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,//this option for allowing user to select month
+      changeYear: true ,//this option for allowing user to select from year range
+     yearRange: '1800:2030'
+    });
+    });
+</script>
+<div class="container">
+<div id="contaner">
+<nav class="navbar navbar-fixed-top" style="background-color:green;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <a id="h1" href="../main.php">
+        <span class="glyphicon glyphicon-home"></span>
+    </a>
+    </div>
+  <span id="h">GroceryOutlet</span>
+    <ul class="nav navbar-nav navbar-right">
+     
+      <li ><a href="../login/login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+ <div class="h">
+  <h3><lable>Description</lable></h3>
+  <br>
+    <form class="form-horizontal" action="get.html" method="post">
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="email">Email-Id:</label>
+      <div class="col-sm-5">
+          <input type="text" class="form-control" name="email id"  placeholder="enter email id">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="pwd">Password:</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" name="password"  placeholder="enter password">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="pwd">Re-Enter password:</label>
+      <div class="col-sm-5">          
+ <input type="text" class="form-control" name="password"  placeholder="Enter again password">
+</div>
+  </div>
+<div class="form-group">        
+ <div class="col-sm-offset-2 col-sm-10">
+ <button type="submit" class="btn btn-success">Submit</button>
+ <button type="submit" class="btn btn-success">Cancel</button>
+   </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</body>
+</html>
+</center>
+</html>
+<nav class="navbar navbar-fixed-bottom" style="background-color:green;">
+  <div class="container-fluid">
+    <div class="navbar-header" >
+
