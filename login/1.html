@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Grocery Outlet</title>
+<link rel="stylesheet" type="text/css" href="style_register.css">
+<script>
+
+//var found = str.match( re );
+var found1 = str.match( re1 );
+
+function fun(x)
+{
+	var x1=x.value;
+	var x2=x1.match(/^[a-zA-Z ]*$/);
+	if(x2)
+		alert('yes');
+	else
+		alert('no');
+}
+</script>
+</head>
+<body>
+<form >
+ <input type="text" name="user_id" onchange="fun(this)">
+ </form>
+ </body>
+ </html>
