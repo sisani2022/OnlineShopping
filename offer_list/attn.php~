@@ -1,0 +1,20 @@
+<html>
+<body>
+<?php
+include('config.php');
+if(isset($_GET['offer_no']))
+{
+$id=$_GET['offer_no'];
+$query1=mysql_query("select * from add where offer_no='$offer_no'");
+	$query1=$query1+1;
+	$age=$query1;
+$query2=mysql_query("UPDATE add SET  item_id=$item_id, item_id1=$item_id1, item_id2=$item_id2, item_id3=$item_id3  where offer_no='$offer_no'");
+if($query2)
+{
+header('location:list.php');
+}
+
+}
+?>
+</body>
+</html>

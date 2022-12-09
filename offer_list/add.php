@@ -72,7 +72,7 @@ color:white
 <nav class="navbar navbar-fixed-center" style="background-color:green;">
   <div class="container-fluid">
     <div class="navbar-header" ><center>
- <span class="glyphicon glyphicon-home" style="position:realtive; left:-130px; top:17px;color:white;"></span>
+ <a href="../adminmain.php"><span class="glyphicon glyphicon-home" style="position:realtive; left:-130px; top:17px;color:white;"></span></a>
     
       <a id="h" class="navbar-brand" href="main.html" style="position:relative;right:-550px; color:white;">GroceryOutlet</center></a>
     </div>

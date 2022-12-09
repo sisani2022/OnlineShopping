@@ -1,0 +1,16 @@
+<html>
+<body>
+<?php
+include('config.php');
+if(isset($_GET['id']))
+{
+$id=$_GET['id'];
+$query1=mysql_query("UPDATE scores SET  age='$age+1' where id='$id'");
+if($query1)
+{
+header('location:list.php');
+}
+}
+?>
+</body>
+</html>
