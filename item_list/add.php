@@ -74,7 +74,7 @@ color:white
     <div class="navbar-header" ><center>
 <a href="../adminmain.php"> <span class="glyphicon glyphicon-home" style="position:realtive; left:-130px; top:17px;color:white;"></span></a>
     
-      <id="h" class="navbar-brand" href="main.html" style="position:relative;right:-550px; color:white;">GroceryOutlet</center>
+      <a id="h" class="navbar-brand" href="main.html" style="position:relative;right:-550px; color:white;">GroceryOutlet</center></a>
     </div>
     <ul class="nav navbar-nav navbar-right">
     
