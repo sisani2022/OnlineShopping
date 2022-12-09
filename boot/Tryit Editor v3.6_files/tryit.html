@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tryit_data/bootstrap.css">
+  <script src="tryit_data/jquery.js"></script>
+  <script src="tryit_data/bootstrap.js"></script>
+  <style>
+  /* Popover */
+  .popover {
+      border: 2px dotted red;
+  }
+  /* Popover Header */
+  .popover-title {
+      background-color: #73AD21; 
+      color: #FFFFFF; 
+      font-size: 28px;
+      text-align:center;
+  }
+  /* Popover Body */
+  .popover-content {
+      background-color: coral;
+      color: #FFFFFF;
+      padding: 25px;
+  }
+  /* Popover Arrow */
+  .arrow {
+      border-right-color: red !important;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h3>Popover CSS Example</h3>
+  <a aria-describedby="popover486961" data-original-title="Popover Header" href="#" data-toggle="popover" title="" data-content="Some content inside the popover">Toggle popover</a><div style="top: 4.39999px; left: 175.5px; display: block;" id="popover486961" class="popover fade right in" role="tooltip"><div style="top: 50%;" class="arrow"></div><h3 class="popover-title">Popover Header</h3><div class="popover-content">Some content inside the popover</div></div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+
+
+</body></html>
