@@ -1,0 +1,33 @@
+ lable{
+    color:green;
+  }
+  .control-label{
+    color:green;
+  }
+  #contaner{
+    box-shadow:10px green;
+    width: 500px;
+    height: 100%;
+    margin-right:500px;
+  }
+ 
+ button{
+ 	margin-right:-100px;
+ 	width:100px;
+ }
+ .row{
+ 	position: relative;
+ 	right: -100px;
+ }
+ .h{
+ 	position: relative;
+ 	right: -100px;
+ 	width:600px;
+ 	height:430px; 
+ 	box-shadow: 5px 5px 5px 5px green;
+ }
+ .container input{
+    width:300px;
+  }
+
+}
